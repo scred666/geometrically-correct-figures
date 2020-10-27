@@ -16,4 +16,4 @@ npm run build
 ```
 
 ### Demos
-[Live demo]()
+[Live demo](https://scred666.github.io/demos/figures/)

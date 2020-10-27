@@ -1,5 +1,7 @@
 # Drawing geometrically correct figures
 
+[Live demo](https://scred666.github.io/demos/figures/)
+
 ## Project setup
 ```
 npm install
@@ -15,5 +17,4 @@ npm run serve
 npm run build
 ```
 
-### Demos
-[Live demo](https://scred666.github.io/demos/figures/)
+

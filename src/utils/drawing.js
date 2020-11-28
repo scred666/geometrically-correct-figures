@@ -1,3 +1,5 @@
+import { shapes } from './figures'
+
 const defaultSvgHeight = 480
 const defaultSvgWidth = 680
 const baseHeight = 4
@@ -171,26 +173,14 @@ const getDoubleSideRectangularTrapezoidVertical = params => {
 
 export const getPath = ({ name, params }) => getFigure[name](params)
 
-const figures = {
-  rectangle: 'rectangle',
-  trapezoid: 'trapezoid',
-  corner: 'corner',
-  rightTriangle: 'rightTriangle',
-  isoscelesTriangle: 'isoscelesTriangle',
-  rhombus: 'rhombus',
-  rectangularTrapezoidVertical: 'rectangularTrapezoidVertical',
-  rectangularTrapezoidHorizontal: 'rectangularTrapezoidHorizontal',
-  doubleSideRectangularTrapezoidVertical: 'doubleSideRectangularTrapezoidVertical'
-}
-
 const getFigure = {
-  [figures.rectangle]: (params) => getRect(params),
-  [figures.trapezoid]: (params) => getTrapezoid(params),
-  [figures.corner]: (params) => getCorner(params),
-  [figures.rightTriangle]: (params) => getRightTriangle(params),
-  [figures.isoscelesTriangle]: (params) => getIsoscelesTriangle(params),
-  [figures.rhombus]: (params) => getRhombus(params),
-  [figures.rectangularTrapezoidVertical]: (params) => getRectangularTrapezoidVertical(params),
-  [figures.rectangularTrapezoidHorizontal]: (params) => getRectangularTrapezoidHorizontal(params),
-  [figures.doubleSideRectangularTrapezoidVertical]: (params) => getDoubleSideRectangularTrapezoidVertical(params)
+  [shapes.rectangle]: (params) => getRect(params),
+  [shapes.trapezoid]: (params) => getTrapezoid(params),
+  [shapes.corner]: (params) => getCorner(params),
+  [shapes.rightTriangle]: (params) => getRightTriangle(params),
+  [shapes.isoscelesTriangle]: (params) => getIsoscelesTriangle(params),
+  [shapes.rhombus]: (params) => getRhombus(params),
+  [shapes.rectangularTrapezoidVertical]: (params) => getRectangularTrapezoidVertical(params),
+  [shapes.rectangularTrapezoidHorizontal]: (params) => getRectangularTrapezoidHorizontal(params),
+  [shapes.doubleSideRectangularTrapezoidVertical]: (params) => getDoubleSideRectangularTrapezoidVertical(params)
 }

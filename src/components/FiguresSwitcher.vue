@@ -24,15 +24,12 @@
 <script>
 
 import { mapActions, mapMutations, mapState } from 'vuex'
-import { clone } from 'ramda'
+// import { clone } from 'ramda'
 import { figures } from '@/utils/figures'
 
 export default {
   name: 'FiguresSwitcher',
-  data () {
-    return {
-    }
-  },
+  data: () => ({}),
   components: {
   },
   methods: {
@@ -59,7 +56,7 @@ export default {
         return this.figureFromStore.name
       },
       set (value) {
-        this.UPDATE_FIGURE(clone(this.figures.find(p => p.name === value)))
+        this.UPDATE_FIGURE(this.figures.find(p => p.name === value))
       }
     }
   }

@@ -21,7 +21,7 @@ import FiguresSwitcher from '@/components/FiguresSwitcher'
 import ParamInput from '@/components/ParamInput'
 import Figure from '@/components/Figure'
 import { mapActions, mapMutations, mapState } from 'vuex'
-import { clone } from 'ramda'
+// import { clone } from 'ramda'
 import { figures } from '@/utils/figures'
 export default {
   name: 'Layout',
@@ -58,7 +58,7 @@ export default {
         return this.figureFromStore.name
       },
       set (value) {
-        this.UPDATE_FIGURE(clone(this.figures.find(p => p.name === value)))
+        this.UPDATE_FIGURE(this.figures.find(p => p.name === value))
       }
     }
   }

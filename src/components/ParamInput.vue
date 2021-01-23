@@ -67,10 +67,9 @@ export default {
   label
     display: grid
     grid-template-columns: 1fr 1fr
-  .name
-    display: flex
     align-items: center
-    justify-content: center
+  .name
+    text-align: left
   .input
     font-family: $main-font
     width: 100px

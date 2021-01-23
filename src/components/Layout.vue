@@ -73,11 +73,12 @@ export default {
     flex-direction: column
     justify-content: center
     align-items: center
+    padding: 40px 0
   .figure
     &__wrapper
       width: 960px
       max-width: 100%
-      +media((flex-direction: (320: column, 768: row)))
+      +media((flex-direction: (320: column, 576: row)))
       margin: 0 auto
       display: flex
       align-items: center
@@ -86,14 +87,14 @@ export default {
         +media((margin: (320: 30px 0, 768: 0)))
         display: flex
         flex-direction: column
-        justify-content: center
-        +media((align-items: (320: center, 768: flex-start)))
-        +media((max-width: (768: 250px)))
-        width: 100%
+        box-sizing: border-box
+        width: 250px
+        +media((flex: (576: 0 0 250px)))
+        +media((padding-left: (576: 40px)))
         .title
-          text-align: center
           width: 100%
           margin-bottom: 24px
           font-size: 24px
+          text-align: left
 
 </style>

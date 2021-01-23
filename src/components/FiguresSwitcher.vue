@@ -78,17 +78,16 @@ export default {
         margin: auto
         text-align: left
       &-items
-        display: flex
-        align-items: center
-        justify-content: center
         width: 960px
         max-width: 100%
-        flex-wrap: wrap
         margin: 40px auto
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(68px, 1fr))
         gap: 20px
         .item
+          width: 100%
+          display: flex
           cursor: pointer
-          display: block
           line-height: 0
           &__input
             display: none
@@ -100,6 +99,7 @@ export default {
             transition: .5s
             filter: grayscale(1)
             opacity: .5
+            max-width: 100%
           @media (any-hover: hover)
             &:hover
               .item__pic
